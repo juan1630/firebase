@@ -1,8 +1,9 @@
 <h3>
-  Héroe <small>nombre...</small>
+  Héroe <small>{{ heroe.nombre }} </small>
 </h3>
   <button [routerLink]="[ 'heroes' ]" class="btn btn-outline-danger" > Regresar </button>
-<hr>
+  <button type="button"  class="btn btn-outline-warning" (click)="agregarNuevo(forma)" > Nuevo Héroe </button>
+<hr> 
 <div class="row">
   <div class="col-md-12">
     <form action=""  (ngSubmit)="guardar()" #forma="ngForm" > 
@@ -31,7 +32,6 @@
               Guardar Cambios
             </button>
           </div>
-          {{forma.valid}}
     </form>
   </div>
 </div>
